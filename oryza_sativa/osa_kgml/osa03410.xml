@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<!DOCTYPE pathway SYSTEM "http://www.kegg.jp/kegg/xml/KGML_v0.7.1_.dtd">
+<!-- Creation date: May 25, 2010 11:42:50 +0900 (JST) -->
+<pathway name="path:osa03410" org="osa" number="03410"
+         title="Base excision repair"
+         image="http://www.kegg.jp/kegg/pathway/osa/osa03410.png"
+         link="http://www.kegg.jp/kegg-bin/show_pathway?osa03410">
+    <entry id="1" name="osa:4347697" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4347697">
+        <graphics name="4347697" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="909" y="957" width="46" height="17"/>
+    </entry>
+    <entry id="2" name="osa:4334691 osa:4339464" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4334691+osa:4339464">
+        <graphics name="4334691..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="955" y="957" width="46" height="17"/>
+    </entry>
+    <entry id="3" name="osa:4326478 osa:4326479 osa:4329546 osa:4343013" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4326478+osa:4326479+osa:4329546+osa:4343013">
+        <graphics name="4326478..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="955" y="974" width="46" height="17"/>
+    </entry>
+    <entry id="4" name="osa:4324149 osa:4348965" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4324149+osa:4348965">
+        <graphics name="4324149..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="863" y="974" width="46" height="17"/>
+    </entry>
+    <entry id="5" name="ko:K10776" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10776">
+        <graphics name="K10776" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="954" y="786" width="46" height="17"/>
+    </entry>
+    <entry id="6" name="ko:K01971 ko:K01972" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K01971+K01972">
+        <graphics name="K01971..." fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="533" y="930" width="46" height="17"/>
+    </entry>
+    <entry id="7" name="osa:4329458 osa:4337886 osa:4347894 osa:9272695" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4329458+osa:4337886+osa:4347894+osa:9272695">
+        <graphics name="4329458..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="955" y="991" width="46" height="17"/>
+    </entry>
+    <entry id="8" name="osa:4327080 osa:4331489 osa:4344737 osa:4347604 osa:4349968" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4327080+osa:4331489+osa:4344737+osa:4347604+osa:4349968">
+        <graphics name="4327080..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="909" y="991" width="46" height="17"/>
+    </entry>
+    <entry id="9" name="ko:K02330" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K02330">
+        <graphics name="K02330" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="863" y="957" width="46" height="17"/>
+    </entry>
+    <entry id="10" name="ko:K02330" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K02330">
+        <graphics name="K02330" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="862" y="794" width="46" height="17"/>
+    </entry>
+    <entry id="11" name="ko:K02330" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K02330">
+        <graphics name="K02330" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="681" y="610" width="46" height="17"/>
+    </entry>
+    <entry id="12" name="ko:K02330" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K02330">
+        <graphics name="K02330" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="383" y="600" width="46" height="17"/>
+    </entry>
+    <entry id="13" name="osa:4331062" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4331062">
+        <graphics name="4331062" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="909" y="974" width="46" height="17"/>
+    </entry>
+    <entry id="14" name="osa:4331062" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4331062">
+        <graphics name="4331062" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="924" width="46" height="17"/>
+    </entry>
+    <entry id="15" name="osa:4331062" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4331062">
+        <graphics name="4331062" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="797" width="46" height="17"/>
+    </entry>
+    <entry id="16" name="osa:4337150 osa:4344789 osa:4344791" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4337150+osa:4344789+osa:4344791">
+        <graphics name="4337150..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="533" y="797" width="46" height="17"/>
+    </entry>
+    <entry id="17" name="osa:4337150 osa:4344789 osa:4344791" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4337150+osa:4344789+osa:4344791">
+        <graphics name="4337150..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="533" y="626" width="46" height="17"/>
+    </entry>
+    <entry id="18" name="osa:4337150 osa:4344789 osa:4344791" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4337150+osa:4344789+osa:4344791">
+        <graphics name="4337150..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="384" y="501" width="46" height="17"/>
+    </entry>
+    <entry id="19" name="osa:4347697" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4347697">
+        <graphics name="4347697" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="458" width="46" height="17"/>
+    </entry>
+    <entry id="20" name="ko:K10771" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10771">
+        <graphics name="K10771" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="635" y="433" width="46" height="17"/>
+    </entry>
+    <entry id="21" name="ko:K01151" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K01151">
+        <graphics name="K01151" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="533" y="458" width="46" height="17"/>
+    </entry>
+    <entry id="22" name="osa:4327960 osa:4327961" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4327960+osa:4327961">
+        <graphics name="4327960..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="533" y="433" width="46" height="17"/>
+    </entry>
+    <entry id="23" name="osa:4351781" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4351781">
+        <graphics name="4351781" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="687" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="24" name="osa:4337373" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4337373">
+        <graphics name="4337373" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="636" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="25" name="osa:4340610 osa:9268162" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4340610+osa:9268162">
+        <graphics name="4340610..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="264" y="252" width="46" height="17"/>
+    </entry>
+    <entry id="26" name="ko:K05522" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K05522">
+        <graphics name="K05522" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="436" y="478" width="46" height="17"/>
+    </entry>
+    <entry id="27" name="osa:4341640 osa:4345225" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4341640+osa:4345225">
+        <graphics name="4341640..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="384" y="478" width="46" height="17"/>
+    </entry>
+    <entry id="28" name="osa:4341640 osa:4345225" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4341640+osa:4345225">
+        <graphics name="4341640..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="158" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="29" name="ko:K02330" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K02330">
+        <graphics name="K02330" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="262" y="627" width="46" height="17"/>
+    </entry>
+    <entry id="30" name="ko:K01971 ko:K01972" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K01971+K01972">
+        <graphics name="K01971..." fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="160" y="861" width="46" height="17"/>
+    </entry>
+    <entry id="31" name="osa:4340098" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4340098">
+        <graphics name="4340098" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="262" y="853" width="46" height="17"/>
+    </entry>
+    <entry id="32" name="ko:K10776" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10776">
+        <graphics name="K10776" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="262" y="870" width="46" height="17"/>
+    </entry>
+    <entry id="33" name="osa:4342129" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4342129">
+        <graphics name="4342129" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="411" y="627" width="46" height="17"/>
+    </entry>
+    <entry id="34" name="osa:4324149 osa:4348965" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4324149+osa:4348965">
+        <graphics name="4324149..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="941" width="46" height="17"/>
+    </entry>
+    <entry id="35" name="osa:4331062" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4331062">
+        <graphics name="4331062" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="610" width="46" height="17"/>
+    </entry>
+    <entry id="36" name="osa:4340604" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4340604">
+        <graphics name="4340604" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="436" y="600" width="46" height="17"/>
+    </entry>
+    <entry id="37" name="ko:K07462" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K07462">
+        <graphics name="K07462" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="436" y="501" width="46" height="17"/>
+    </entry>
+    <entry id="38" name="osa:4334691 osa:4339464" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4334691+osa:4339464">
+        <graphics name="4334691..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="814" width="46" height="17"/>
+    </entry>
+    <entry id="39" name="osa:4340098" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4340098">
+        <graphics name="4340098" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="908" y="794" width="46" height="17"/>
+    </entry>
+    <entry id="40" name="ko:K10568" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10568">
+        <graphics name="K10568" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="331" y="252" width="46" height="17"/>
+    </entry>
+    <entry id="41" name="osa:4329639" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4329639">
+        <graphics name="4329639" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="264" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="42" name="path:osa03410" type="map"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa03410">
+        <graphics name="TITLE:Base excision repair" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="roundrectangle" x="135" y="58" width="189" height="25"/>
+    </entry>
+    <entry id="43" name="osa:4346365" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4346365">
+        <graphics name="4346365" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="748" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="44" name="osa:4327631 osa:4331957 osa:4341682 osa:4347081 osa:9272626" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4327631+osa:4331957+osa:4341682+osa:4347081+osa:9272626">
+        <graphics name="4327631..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="533" y="252" width="46" height="17"/>
+    </entry>
+    <entry id="45" name="osa:4330890" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4330890">
+        <graphics name="4330890" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="687" y="252" width="46" height="17"/>
+    </entry>
+    <entry id="46" name="ko:K03649" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K03649">
+        <graphics name="K03649" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="636" y="252" width="46" height="17"/>
+    </entry>
+    <entry id="47" name="ko:K10800" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10800">
+        <graphics name="K10800" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="636" y="278" width="46" height="17"/>
+    </entry>
+    <entry id="48" name="ko:K10567" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10567">
+        <graphics name="K10567" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="331" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="49" name="ko:K10569" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10569">
+        <graphics name="K10569" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="331" y="278" width="46" height="17"/>
+    </entry>
+    <entry id="50" name="osa:4327960 osa:4327961" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4327960+osa:4327961">
+        <graphics name="4327960..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="158" y="433" width="46" height="17"/>
+    </entry>
+    <entry id="51" name="ko:K10771" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K10771">
+        <graphics name="K10771" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="264" y="433" width="46" height="17"/>
+    </entry>
+    <entry id="52" name="ko:K01151" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K01151">
+        <graphics name="K01151" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="158" y="458" width="46" height="17"/>
+    </entry>
+    <entry id="53" name="osa:4327080 osa:4331489 osa:4344737 osa:4347604 osa:4349968" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4327080+osa:4331489+osa:4344737+osa:4347604+osa:4349968">
+        <graphics name="4327080..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="635" y="627" width="46" height="17"/>
+    </entry>
+    <entry id="54" name="osa:4347697" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4347697">
+        <graphics name="4347697" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="264" y="458" width="46" height="17"/>
+    </entry>
+    <entry id="55" name="osa:4329458 osa:4337886 osa:4347894 osa:9272695" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4329458+osa:4337886+osa:4347894+osa:9272695">
+        <graphics name="4329458..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="681" y="627" width="46" height="17"/>
+    </entry>
+    <entry id="56" name="osa:4326478 osa:4326479 osa:4329546 osa:4343013" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4326478+osa:4326479+osa:4329546+osa:4343013">
+        <graphics name="4326478..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="908" y="777" width="46" height="17"/>
+    </entry>
+    <entry id="57" name="osa:4339642 osa:4339711" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4339642+osa:4339711">
+        <graphics name="4339642..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="533" y="227" width="46" height="17"/>
+    </entry>
+    <entry id="58" name="osa:4347697" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4347697">
+        <graphics name="4347697" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="862" y="777" width="46" height="17"/>
+    </entry>
+    <entry id="59" name="osa:4340098" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4340098">
+        <graphics name="4340098" fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="262" y="610" width="46" height="17"/>
+    </entry>
+    <entry id="60" name="osa:4337150 osa:4344789 osa:4344791" type="gene"
+        link="http://www.kegg.jp/dbget-bin/www_bget?osa:4337150+osa:4344789+osa:4344791">
+        <graphics name="4337150..." fgcolor="#000000" bgcolor="#BFFFBF"
+             type="rectangle" x="159" y="626" width="46" height="17"/>
+    </entry>
+    <entry id="61" name="ko:K05522" type="ortholog"
+        link="http://www.kegg.jp/dbget-bin/www_bget?K05522">
+        <graphics name="K05522" fgcolor="#000000" bgcolor="#FFFFFF"
+             type="rectangle" x="158" y="252" width="46" height="17"/>
+    </entry>
+</pathway>

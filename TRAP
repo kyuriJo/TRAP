@@ -1,0 +1,164 @@
+#!/bin/bash
+
+: '
+TRAP - Time-series RNA-seq Analysis Package
+
+Created by Kyuri Jo on 2014-02-05.
+Copyright (c) 2014 Kyuri Jo. All rights reserved.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+----------------------------------------------------------------------
+'
+
+CONF_FILE="config.txt"
+cuff=0
+tophat=0
+
+# Read config file and assign values
+
+for i in `cat $CONF_FILE | grep '^[^#].*'`
+do
+   var=`echo "$i" | awk -F"=" '{print $1}'`
+   param=`echo "$i" | awk -F"=" '{print $2}'`
+   eval $var=$param
+done
+
+# Print a sample value
+
+echo $'Starting TRAP 2.3.......\n\n###### mRNA Sequencing Data Analysis ######\n'
+
+cuffd=0
+cuff=0
+top=0
+while [ "$cuffdiff" == "yes" ]; do
+    read -p "Do you have Cuffdiff results? (y/n) : " yn
+    case $yn in
+        [Yy]* ) cuffd=1; break;;
+        [Nn]* ) cuffd=0; break;;
+        * ) echo "Please answer y or n";;
+    esac
+done
+while [ "$cuffdiff" == "no" ]; do
+    read -p "Do you have Cufflinks results? (y/n) : " yn
+    case $yn in
+        [Yy]* ) cuff=1; break;;
+        [Nn]* ) cuff=0; break;;
+        * ) echo "Please answer y or n";;
+    esac
+done
+while [ "$cuff" == 0 ]; do
+    read -p "Do you have Tophat results? (y/n) : " yn
+    case $yn in
+        [Yy]* ) top=1; break;;
+        [Nn]* ) top=0; break;;
+        * ) echo "Please answer y or n";;
+    esac
+done
+
+current=`pwd`
+
+if [ "$top" == 0 ]; then
+echo $'\n'
+echo "### Tophat : Mapping reads to reference genome ###"
+echo "Log will be written in tophat_result/SAMPLE/logs directory"
+
+for i in $(eval echo "{1..$numTP}")
+do
+   eval con='$control'$i
+   IFS=',' array=($con)
+   for elem in "${array[@]}"
+   do
+      eval con2='$'$elem'Path'
+      echo $'\n'
+      echo "Start Tophat for mapping ${elem}"
+      re=' '
+      echo "${tophatPath}tophat -o tophat_result/${elem} -G $gffPath $refIndex ${con2//,/$re}"; eval "${tophatPath}tophat -o ${current}/tophat_result/${elem} -G $gffPath $refIndex ${con2//,/$re};"
+      echo $'\n'
+   done
+
+  eval tre='$treatment'$i
+   IFS=',' array=($tre)
+   for elem in "${array[@]}"
+   do
+      eval tre2='$'$elem'Path'
+      echo $'\n'
+      echo "Start Tophat for mapping ${elem}"
+      echo "${tophatPath}tophat -o tophat_result/${elem} -G $gffPath $refIndex ${tre2//,/$re}"; eval "${tophatPath}tophat -o ${current}/tophat_result/${elem} -G $gffPath $refIndex ${tre2//,/$re}"
+      echo $'\n'
+   done
+done
+fi
+
+if [ "$cuffdiff" == "no" ] && [ "$cuff" == 0 ]; then
+echo $'\n'
+echo "### Cufflinks : Estimating gene expression values ###"	
+echo "Log will be written in cufflinks_result/SAMPLE/log.txt"
+
+for i in $(eval echo "{1..$numTP}")
+do
+   eval con='$control'$i
+   IFS=',' array=($con)
+   for elem in "${array[@]}"
+   do
+      echo $'\n'
+      echo "Start Cufflinks for ${elem}"
+      echo "${cuffPath}cufflinks -o cufflinks_result/${elem} -G $gffPath tophat_result/${elem}/accepted_hits.bam"; eval "${cuffPath}cufflinks -o ${current}/cufflinks_result/${elem} -G $gffPath ${current}/tophat_result/${elem}/accepted_hits.bam 2>&1 | tee ${current}/cufflinks_result/${elem}/log.txt"
+   done
+
+   eval tre='$treatment'$i
+   IFS=',' array=($tre)
+   for elem in "${array[@]}"
+   do
+      echo $'\n'
+      echo "Start Cufflinks for ${elem}"
+      echo "${cuffPath}cufflinks -o cufflinks_result/${elem} -G $gffPath tophat_result/${elem}/accepted_hits.bam"; eval "${cuffPath}cufflinks -o ${current}/cufflinks_result/${elem} -G $gffPath ${current}/tophat_result/${elem}/accepted_hits.bam 2>&1 | tee ${current}/cufflinks_result/${elem}/log.txt"
+   done
+done
+fi
+
+if [ "$cuffdiff" == "yes" ] && [ "$cuffd" == 0 ]; then
+echo "### Cuffdiff : Estimating gene expression values and finding DEGs###"
+echo "Log will be written in cuffdiff_result/SAMPLE/log.txt"
+
+echo "Start Cuffcompare for making combined gtf file"
+eval "${cuffPath}cuffcompare -o ${current}/cuffdiff_result/ -CG -r ${gffPath} ${gffPath} 2>&1 | tee ${current}/cuffdiff_result/log_cuffcompare.txt"
+
+for i in $(eval echo "{1..$numTP}")
+do
+   eval diff='$diff'$i
+   eval con='$control'$i
+   conCuff=""
+   IFS=',' array=($con)
+   for elem in "${array[@]}"
+   do
+	conCuff=${conCuff}${current}'/tophat_result/'${elem}'/accepted_hits.bam,'
+   done
+   conCuff=${conCuff/%,/}
+   eval tre='$treatment'$i
+   treCuff=""
+   IFS=',' array=($tre)
+   for elem in "${array[@]}"
+   do
+        treCuff=${treCuff}${current}'/tophat_result/'${elem}'/accepted_hits.bam,'
+   done
+   treCuff=${treCuff/%,/}
+   echo $'\n'
+   echo "Start Cuffdiff for control${i} and treatment${i}"
+   echo "${cuffPath}cuffdiff -o cuffdiff_result/${diff} ${current}/cuffdiff_result/cuffcmp.combined.gtf ${conCuff} ${treCuff}"; eval "${cuffPath}cuffdiff -o cuffdiff_result/${diff} ${current}/cuffdiff_result/cuffcmp.combined.gtf ${conCuff} ${treCuff} 2>&1 | tee ${current}/cuffdiff_result/${diff}/log.txt"
+done
+fi
+
+python TRAP.py
+

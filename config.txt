@@ -1,0 +1,66 @@
+# Fill in the following as described in README file
+
+# 1. Number of time points & replicates
+numTP=3
+
+# 2. Sample pair : control - treatment order
+control1=CON11,CON12,CON13
+control2=CON21,CON22,CON23
+control3=CON31,CON32,CON33
+treatment1=TRE11,TRE12,TRE13
+treatment2=TRE21,TRE22,TRE23
+treatment3=TRE31,TRE32,TRE33
+
+# 3. Gene name conversion file path	(Provided for rice)
+convfilePath=/PATH_TO_TRAP/TRAP/oryza_sativa/kegg_osa_keggID_geneID.txt
+
+# 4. Pathway name file path		(Provided for rice)
+pnamePath=/PATH_TO_TRAP/TRAP/oryza_sativa/kegg_osa_pathwayname.txt
+
+# 5. KGML file path			(Provided for rice)
+kgmlPath=/PATH_TO_TRAP/osa_kgml
+
+# 6. Use of Cufflinks/Cuffdiff result
+cuffdiff=no
+
+# 6-1. Cuffdiff p-value cutoff and directory names 	(Write only if you
+# answered yes to 6)
+pVal=0.05
+diff1=CON1_TRE1
+diff2=CON2_TRE2
+diff3=CON3_TRE3
+
+# 6-2. DEG cutoff (log fold change)	(Write only if you
+# answered no in 6)
+DEGCut=2.0
+
+# 7. Clustering cutoff & Time-lag factor
+clusterCut=2.0
+timeLag=1.0
+
+# Tophat software path 			(optional for Tophat)
+tophatPath=/PATH_TO_TOPHAT/
+
+# Cufflinks software path 		(optional for Cufflinks and Cuffdiff)
+cuffPath=/PATH_TO_CUFFLINKS/
+
+# Sample name and file path	(optional for Tophat)
+CON11Path=/PATH_TO_THE_FILE/control11_1.fq,/PATH_TO_THE_FILE/control11_2.fq
+CON21Path=/PATH_TO_THE_FILE/control21_1.fq,/PATH_TO_THE_FILE/control21_2.fq
+CON31Path=/PATH_TO_THE_FILE/control31_1.fq,/PATH_TO_THE_FILE/control31_2.fq
+CON12Path=/PATH_TO_THE_FILE/control12_1.fq,/PATH_TO_THE_FILE/control12_2.fq
+CON22Path=/PATH_TO_THE_FILE/control22_1.fq,/PATH_TO_THE_FILE/control22_2.fq
+CON32Path=/PATH_TO_THE_FILE/control32_1.fq,/PATH_TO_THE_FILE/control32_2.fq
+TRE11Path=/PATH_TO_THE_FILE/treatment11_1.fq,/PATH_TO_THE_FILE/treatment11_2.fq
+TRE21Path=/PATH_TO_THE_FILE/treatment21_1.fq,/PATH_TO_THE_FILE/treatment21_2.fq
+TRE31Path=/PATH_TO_THE_FILE/treatment31_1.fq,/PATH_TO_THE_FILE/treatment31_2.fq
+TRE12Path=/PATH_TO_THE_FILE/treatment12_1.fq,/PATH_TO_THE_FILE/treatment12_2.fq
+TRE22Path=/PATH_TO_THE_FILE/treatment22_1.fq,/PATH_TO_THE_FILE/treatment22_2.fq
+TRE32Path=/PATH_TO_THE_FILE/treatment32_1.fq,/PATH_TO_THE_FILE/treatment32_2.fq
+
+# Reference genome index path 	(optional for Tophat)
+# FILE_NAME should be without filename extension
+refIndex=/PATH_TO_INDEX_FILES/FILE_NAME
+
+# GFF file path 		(optional for Cufflinks and Cuffdiff, provided for rice)
+gffPath=/PATH_TO_TRAP/TRAP/oryza_sativa/RAP.gff
