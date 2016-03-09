@@ -212,7 +212,7 @@ def main() :
                                 tp = l.split()
 				if not is_number(tp[9]) :
 					continue
-				if tp[9]=='inf' :
+				if ( tp[9]=='inf' or tp[9] == '-inf') :
 					temp[tp[2]]=0
 				else: 
 	                                temp[tp[2]]=float(tp[9])
