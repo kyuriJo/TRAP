@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 import os
+from shutil import copy
 import math
 import numpy as np
 from xml.dom.minidom import parseString
@@ -162,6 +163,14 @@ def main() :
 	except :
 		print "Configuration file error"
 		raise
+        # Make sure result path exists
+        try: 
+            os.makedirs(resultPath)
+        except OSError:
+            if not os.path.isdir(resultPath):
+                raise
+        # Copy config file so we don't get confused of what params have been set
+        copy("config.txt", resultPath)
 
 	# Reading ID-conversion / pathway name file
 	for ids in idFile.readlines() :
