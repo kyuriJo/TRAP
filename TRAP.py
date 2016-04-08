@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 import os
+from shutil import copy
 import math
 import numpy as np
 from xml.dom.minidom import parseString
@@ -122,32 +123,32 @@ def main() :
 			tp = cl.split("=")
 			if (len(tp)<2) :
 				continue
-			key=tp[0]
-			val=tp[1]
+			key=tp[0].strip()
+			val=tp[1].strip()
 			if (key[:7]=="control") :
-				controlList.append(val.strip().split(','))	
+				controlList.append(val.split(','))	
 			elif (key[:9]=="treatment") :
-				caseList.append(val.strip().split(','))
+				caseList.append(val.split(','))
 			elif (key=="numTP") :
-				timeLen=int(val.strip())	
+				timeLen=int(val)	
 			elif (key=="convfilePath") :
-				geneIDPath = val.strip()
+				geneIDPath = val
 			elif (key=="pnamePath") :
-				pnamePath = val.strip()
+				pnamePath = val
 			elif (key=="kgmlPath") :
-				kgmlPath = val.strip()
+				kgmlPath = val
 			elif (key=="cuffdiff") :
-				cuffdiff = val.strip()
+				cuffdiff = val
 			elif (key=="pVal") :
-				pCut = float(val.strip())
+				pCut = float(val)
 			elif (key[:4]=="diff") :
-				diffList.append(val.strip())
+				diffList.append(val)
 			elif (key=="DEGCut") :
-				DEGCut = float(val.strip())
+				DEGCut = float(val)
 			elif (key=="clusterCut") :
-				clusterCut = float(val.strip())
+				clusterCut = float(val)
 			elif (key=="timeLag") :
-				timeLag = float(val.strip())
+				timeLag = float(val)
 			else :
 				continue
 		idFile = open(geneIDPath, "r")
@@ -162,6 +163,14 @@ def main() :
 	except :
 		print "Configuration file error"
 		raise
+        # Make sure result path exists
+        try: 
+            os.makedirs(resultPath)
+        except OSError:
+            if not os.path.isdir(resultPath):
+                raise
+        # Copy config file so we don't get confused of what params have been set
+        copy("config.txt", resultPath)
 
 	# Reading ID-conversion / pathway name file
 	for ids in idFile.readlines() :
@@ -196,6 +205,8 @@ def main() :
                 for j in range(timeLen) :
                         pfile = open(os.path.join(diffPath, diffList[j], "gene_exp.diff"), "r")
                         for l in pfile.readlines() :
+                                if l.startswith('#'):
+                                        continue
                                 tp = l.split()
 				if not is_number(tp[9]) :
 					continue
@@ -209,6 +220,9 @@ def main() :
                         temp = {}
                         temp2 = {}
                         for l in pfile.readlines() :
+                                if l.startswith('#'):
+                                        continue
+
                                 tp = l.split()
 				if not is_number(tp[9]) :
 					continue
@@ -364,7 +378,7 @@ def main() :
 					for t in range(0, timeLen) :
 						foldchange = fcList[tpName][t]
 						wgene[t][i][g]=foldchange
-						if (cuffdiff=="yes" and pVal[tpName][t]<pCut and abs(foldchange)>=DEGCut) :
+						if (cuffdiff=="yes" and pVal[tpName][t]<=pCut and abs(foldchange)>=DEGCut) :
 							DEG[t][i].add(g)
 						elif (cuffdiff=="no" and abs(foldchange)>=DEGCut) :
 							DEG[t][i].add(g)
